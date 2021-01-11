@@ -1,6 +1,6 @@
 import React from 'react'
 import '../stylesheets/header.css'
-
+import {Link} from 'react-router-dom'
 import logo from '../assets/amazon-logo3.png'
 // material-ui icons
 import SearchIcon from '@material-ui/icons/Search';
@@ -30,7 +30,7 @@ function Header() {
                     <span className="header_optionTwo">Prime</span>
                 </div>
                 <div className="header_basketIcon">
-                    <ShoppingBasketIcon/>
+                  <Link to="/checkout">  <ShoppingBasketIcon/></Link>
                     <span className="header_optionTwo header_basketCount">0</span>
                 </div>
             </div>

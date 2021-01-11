@@ -1,0 +1,20 @@
+.product{
+    background-color: white;
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 380px;
+    min-height: 100px;
+    margin-right: 20px;
+}
+.product > img{
+    width: 100%;
+    height: 250px;
+}
+.product_title{
+    font-size: 22px;
+    font-weight: 650;
+    margin-bottom: 20px;
+}

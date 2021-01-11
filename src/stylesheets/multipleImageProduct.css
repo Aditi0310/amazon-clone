@@ -1,0 +1,37 @@
+.multi_product{
+    background-color: white;
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 400px;
+    min-height: 100px;
+    margin-right: 20px;
+}
+.product2_image{
+    height: 100px;
+    width: 120px;
+    margin: 10px;
+}
+.product_title1{
+    font-size: 22px;
+    font-weight: 650;
+    padding: 10px;
+}
+.row1{
+    display: flex;
+}
+.row2{
+    display: flex;
+}
+.image_title1{
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.image_title2{
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 8rem;
+}

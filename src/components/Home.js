@@ -12,7 +12,8 @@ import Laptop from '../assets/laptop.jpg'
 import Router from '../assets/routers.jpg'
 import Keyboard from '../assets/keyboard.jpg'
 import Headphone from '../assets/headphone.jpg'
-import chocolate from '../assets/chocolates.jpg'
+import chocolate from '../assets/chocolates.jpg';
+
 
 function Home() {
     return (
@@ -36,9 +37,13 @@ function Home() {
                         image={chocolate}
                         id={0}
                         price='28.98'
-                        
+                        rating={5}
                     />
-                    <Product/>
+                    <Product title='Chocolates, sweets and more'
+                        image={chocolate}
+                        id={1}
+                        price='28.98'
+                        rating={5}/>
                 </div>
                 <div className="home_row">
 

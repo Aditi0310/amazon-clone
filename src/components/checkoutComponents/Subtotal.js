@@ -1,14 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react'
 import CurrencyFormat from 'react-currency-format';
 import Typography from '@material-ui/core/Typography'
 import { Button } from '@material-ui/core';
+import {useStateValue} from '../StateProvider'
+import {sum} from '../Reducer'
 
 function Subtotal() {
+
+    const [{ basket }, dispatch] = useStateValue();
+    const [s,ss] = useState(0);
+
+  const add = (basket) => {
+    
+  };
     return (
         <div><>
                         <p>
-                            Subtotal (0 items): <strong>$ 0</strong>
-                        </p>
+                        Subtotal ({basket?.length} items): <strong>${sum(basket)}</strong>
+    </p>
                         <small className="subtotal_gift">
                             <input type="checkbox"/> <Typography>This order contains a gift.</Typography>
                         </small>

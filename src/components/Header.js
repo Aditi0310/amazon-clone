@@ -5,8 +5,12 @@ import logo from '../assets/amazon-logo3.png'
 // material-ui icons
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import {useStateValue} from './StateProvider';
+
 
 function Header() {
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         <div className="header">
             <img src={logo} className="header_logo"/>
@@ -31,7 +35,7 @@ function Header() {
                 </div>
                 <div className="header_basketIcon">
                   <Link to="/checkout">  <ShoppingBasketIcon/></Link>
-                    <span className="header_optionTwo header_basketCount">0</span>
+                    <span className="header_optionTwo header_basketCount">{basket?.length}</span>  {/* ? beacause if any problem happen it will automatically handle it */}
                 </div>
             </div>
         </div>

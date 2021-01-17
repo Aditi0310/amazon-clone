@@ -8,3 +8,6 @@ const firebaseConfig = {
     appId: "1:405787465755:web:8dd44b6dc9e2813c6540be",
     measurementId: "G-8T0RP6Q6NE"
   };
+
+
+  // step-1 -> go to firebase project - project settings - config and copy paste

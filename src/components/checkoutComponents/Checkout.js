@@ -13,13 +13,13 @@ function Checkout() {
             <Grid container>
                 <Grid item xs={12} sm={8}>
                     <Typography>Your Shopping Cart</Typography>
-                    <CheckoutProduct title='Chocolates, sweets and more'
+                    {/*}<CheckoutProduct title='Chocolates, sweets and more'
                         image={chocolate}
                         id={0}
                         price='28.98'
-                         rating={5}/>
-                    {basket.map(item => {
-                        console.log(item.id);
+                        rating={5}/>{*/}
+                    {basket.map(item => (
+                        console.log(item.image,item.title),
                         <CheckoutProduct
                             id={item.id}
                             title={item.title}
@@ -28,7 +28,7 @@ function Checkout() {
                             image={item.image}
                             
                         ></CheckoutProduct>
-                    })}
+                    ))}
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <Subtotal/>

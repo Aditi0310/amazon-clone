@@ -39,10 +39,12 @@
     flex-direction: column;
     margin: 0 10px;
     color: white;
+    
 }
 .header_optionOne{
     font-size: 12px;
     font-weight: 400;
+
 }
 .header_optionTwo{
     font-size: 15px;
@@ -55,4 +57,7 @@
 }
 .header_basketCount{
     margin: 0 10px;
+}
+.shopping_icon{
+    color: white;
 }

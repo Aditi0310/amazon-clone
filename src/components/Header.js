@@ -6,11 +6,17 @@ import logo from '../assets/amazon-logo3.png'
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {useStateValue} from './StateProvider';
+import { auth } from '../firebase';
 
 
 function Header() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
+    const handleAuthentication = () => {
+        if(user){
+            auth.signOut();
+        }
+    }
     return (
         <div className="header">
             <img src={logo} className="header_logo"/>
@@ -21,10 +27,10 @@ function Header() {
             </div>
 
             <div className="header_nav">
-                <Link to='/login'>
-                <div className="header_option">
-                    <span className="header_optionOne">Hello</span>
-                    <span className="header_optionTwo">Sign In</span>
+                <Link to={!user && '/login'}> {/*} so that when we click on sign out button it will not redirect us to login page {*/}
+                <div className="header_option" onClick={handleAuthentication}>
+                    <span className="header_optionOne">Hello, {user ? user?.email : 'Guest'} </span>
+                    <span className="header_optionTwo">{user ? 'Sign Out' : 'Sign In'}</span>
                    
                 </div>
                 </Link>
@@ -37,7 +43,7 @@ function Header() {
                     <span className="header_optionTwo">Prime</span>
                 </div>
                 <div className="header_basketIcon">
-                  <Link to="/checkout">  <ShoppingBasketIcon/></Link>
+                  <Link to="/checkout">  <ShoppingBasketIcon className="shopping_icon"/></Link>
                     <span className="header_optionTwo header_basketCount">{basket?.length}</span>  {/* ? beacause if any problem happen it will automatically handle it */}
                 </div>
             </div>

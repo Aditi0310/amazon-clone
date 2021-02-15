@@ -10,3 +10,13 @@
     margin-top: -50px;
     height: 300px;
 }
+.home_row1{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 150px;
+    height: 300px;
+}
+.home_row2{
+    margin-top: 150px;
+    margin-left: 150px;
+}

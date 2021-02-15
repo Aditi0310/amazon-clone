@@ -30,7 +30,9 @@ const removeItem = () => {
                         <p>1</p>
                     })}
                 </div>
-                <button onClick={removeItem}>Remove Item</button>
+                <div className="checkoutProduct_button">
+                <button onClick={removeItem} className="button">Remove Item</button>
+                </div>
             </div>
             
         </div>
